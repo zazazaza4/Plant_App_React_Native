@@ -23,7 +23,7 @@ const MenuContainer = ({
 }: MenuContainerProps) => {
   const handlePress = () => {
     const titleLower = title.toLowerCase();
-    if (titleLower in TypeEnum) {
+    if (Object.values(TypeEnum).includes(titleLower as TypeEnum)) {
       setType(titleLower as TypeEnum);
     }
   };
