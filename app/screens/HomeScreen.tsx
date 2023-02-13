@@ -6,7 +6,7 @@ import {useNavigation} from '@react-navigation/native';
 
 import {HeroImage} from '../assets';
 
-function HomeScreen(): JSX.Element {
+export function HomeScreen(): JSX.Element {
   const navigation = useNavigation();
 
   return (
@@ -59,5 +59,3 @@ function HomeScreen(): JSX.Element {
     </SafeAreaView>
   );
 }
-
-export default HomeScreen;
