@@ -6,7 +6,8 @@ import {
   Image,
   ImageSourcePropType,
 } from 'react-native';
-import {TypeEnum} from '../@types/TypeMenu';
+
+import {TypeEnum} from '../@types';
 
 interface MenuContainerProps {
   title: string;
@@ -15,12 +16,12 @@ interface MenuContainerProps {
   setType: Dispatch<SetStateAction<TypeEnum>>;
 }
 
-const MenuContainer = ({
+export function MenuContainer({
   imageSrc,
   title,
   type,
   setType,
-}: MenuContainerProps) => {
+}: MenuContainerProps) {
   const handlePress = () => {
     const titleLower = title.toLowerCase();
     if (Object.values(TypeEnum).includes(titleLower as TypeEnum)) {
@@ -41,5 +42,4 @@ const MenuContainer = ({
       <Text className="text-[#00bcc9] text-xl font-semibold">{title}</Text>
     </TouchableOpacity>
   );
-};
-export default MenuContainer;
+}
